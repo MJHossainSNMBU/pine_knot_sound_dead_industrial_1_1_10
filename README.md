@@ -114,25 +114,6 @@ python -m pytest -q
 
 Tests use synthetic data. They check the actual crop, resampling and patch indexing interfaces, coordinate mappings, tree split protection, the classifier and boundary metrics. They do not establish accuracy on the real dataset. GitHub Actions runs these checks on CPU. See [package validation](docs/validation.md) for the checks completed before packaging.
 
-## Results and interpretation
 
-[Method notes](docs/method.md) distinguish published details from adaptations and explain known limitations. [Reference results](docs/results.md) summarise the supplied wet CT experiment. `docs/report.tex` is a standalone Overleaf document containing the results comparison.
-
-Reported final status accuracy is 89.19 percent. Boundary MAE is 7.60 mm and RMSE is 10.18 mm on 189 knots with dead reference positions. Only 6 of 42 entirely sound reference knots were classified as entirely sound. These are descriptive results against mask derived references, not independently measured board boundaries.
-
-CT volumes, trained weights, source publications and personal absolute paths are not included. The aggregate reference results are included for context. No software license has been assigned. See `LICENSE_NOTICE.md`.
-
-## Upload to GitHub
-
-Extract this package and create an empty GitHub repository. From the extracted repository folder:
-
-```bash
-git init
-git add .
-git commit -m "Add Pine knot classification research workflow"
-git branch -M main
-git remote add origin https://github.com/YOUR_ACCOUNT/YOUR_REPOSITORY.git
-git push -u origin main
-```
 
 Replace the remote URL with your own. Add the agreed software license and project authors before public release. GitHub ignores neither sensitive data nor personal paths automatically, so the provided ignore rules exclude CT arrays, weights and logs.
