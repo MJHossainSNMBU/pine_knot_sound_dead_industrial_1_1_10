@@ -1,0 +1,4 @@
+# Optional local desktop viewer. Not needed on Orion for training.
+numpy>=1.24,<3
+pynrrd>=1.0,<2
+vtk>=9.2,<10
